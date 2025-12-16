@@ -204,7 +204,6 @@ class MonthlySplit(BaseCrossValidator):
         idx_test : ndarray
             The testing set indices for that split.
         """
-
         time = self._get_time_column(X)
         months = pd.PeriodIndex(time, freq="M")
         unique_months = months.sort_values().unique()
